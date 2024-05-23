@@ -1,11 +1,11 @@
-This project is a two-page web application built with Next.js, Tailwind CSS, and Material-UI. The application includes a Shop Home page displaying categories and products, and a Product Details page that shows detailed information about a selected product.
+## This project is a two-page web application built with Next.js, Tailwind CSS, and Material-UI. The application includes a Shop Home page displaying categories and products, and a Product Details page that shows detailed information about a selected product.
 
 Technologies and Tools
--Node.js: v16.14.0
--Next.js: v12.1.6
--React: v18.0.0
--Tailwind CSS: v3.0.23
--Material-UI: v5.6.2
+- Node.js: v16.14.0
+- Next.js: v12.1.6
+- React: v18.0.0
+- Tailwind CSS: v3.0.23
+- Material-UI: v5.6.2
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
