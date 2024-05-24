@@ -48,7 +48,7 @@ const ProductDetails = ({ productId }: Props) => {
           imageList={product?.images}
           thumbImage={product?.thumbnail}
         />
-        <div className=" flex flex-col gap-[4px]">
+        <div className=" flex flex-col gap-[16px]">
           <h2 className=" text-[24px] font-semibold">{product?.title}</h2>
 
           <Stack spacing={2} alignItems="center" direction="row">
@@ -110,7 +110,7 @@ const ProductDetails = ({ productId }: Props) => {
       <p className=" font-semibold text-[24px] mt-[32px] pb-[16px]">
         All Product
       </p>
-      <div className=" grid grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-[16px] py-[16px]">
+      <div className=" grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-[16px] py-[16px]">
         {allProductLoader ? (
           <p>Loading...</p>
         ) : (
@@ -118,7 +118,12 @@ const ProductDetails = ({ productId }: Props) => {
             <Link href={`/detials/${item?.id}`} key={index}>
               <div className=" rounded flex gap-[8px] h-[80px] p-[8px] border-[1px] border-gray-200 shadow-md ">
                 <div className=" relative h-full w-[100px] overflow-auto">
-                  <Image src={item?.thumbnail} fill alt="" />
+                  <Image
+                    src={item?.thumbnail}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    fill
+                    alt=""
+                  />
                 </div>
                 <div className=" flex flex-col gap-[8px]">
                   <p className=" line-clamp-2 text-[12px]">

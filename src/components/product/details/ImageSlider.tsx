@@ -14,6 +14,7 @@ const ImageSlider = ({ imageList, thumbImage }: Props) => {
         <Image
           src={imgShow !== "" ? imgShow : thumbImage || "next.svg"}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           alt=""
         />
       </div>

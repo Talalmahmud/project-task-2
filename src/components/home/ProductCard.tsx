@@ -14,7 +14,12 @@ const ProductCard = ({ productDetails }: Props) => {
       <Link href={`/detials/${productDetails?.id}`}>
         <div className=" w-full flex flex-col">
           <div className=" relative overflow-auto w-full h-[150px] object-cover">
-            <Image src={productDetails?.thumbnail} fill alt="" />
+            <Image
+              src={productDetails?.thumbnail}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              fill
+              alt=""
+            />
           </div>
           <div className=" px-[16px] flex flex-col text-[14px] gap-[4px] py-[16px]">
             {/* {Array.from()} */}
