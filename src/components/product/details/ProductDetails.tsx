@@ -29,7 +29,7 @@ const ProductDetails = ({ productId }: Props) => {
     setImageLoader(true);
     const res = await axios.get(ENDPOINT.ALL_PRODUCT);
     const result = await res.data;
-    console.log(result);
+   
     setProductList(result?.products);
     setImageLoader(false);
   };

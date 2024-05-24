@@ -43,7 +43,7 @@ const Home = (props: Props) => {
       setIsLoading(false);
     }
   };
-  console.log(categoryWithProduct);
+ 
   useEffect(() => {
     getAllCategories();
   }, []);
