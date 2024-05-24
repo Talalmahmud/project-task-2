@@ -27,7 +27,7 @@ const Home = (props: Props) => {
     try {
       setIsLoading(true);
       const results = await Promise.all(
-        allCategories.map(async (item) => {
+        allCategories?.map(async (item) => {
           const res = await axios.get(
             ENDPOINT.PRODUCT_SEARCCH_BY_CATEGORY + item
           );
