@@ -17,6 +17,7 @@ const Home = (props: Props) => {
     try {
       const res = await axios.get(ENDPOINT.PRODUCT_CATEGORIES);
       const result = await res.data;
+
       setAllCategories(result);
     } catch (error) {
       console.log(error);
@@ -44,7 +45,7 @@ const Home = (props: Props) => {
       setIsLoading(false);
     }
   };
-  console.log(categoryWithProduct);
+
   useEffect(() => {
     getAllCategories();
   }, []);
@@ -68,7 +69,7 @@ const Home = (props: Props) => {
             categoryWithProduct?.map((product: any, index: number) => (
               <div key={index}>
                 <ProductWithCard
-                  title={product?.item?.name}
+                  title={product?.item}
                   productList={product?.result?.slice(0, 4)}
                 />
               </div>

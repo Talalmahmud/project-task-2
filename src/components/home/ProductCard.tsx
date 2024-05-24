@@ -12,7 +12,6 @@ const ProductCard = ({ productDetails }: Props) => {
   return (
     <div className=" w-full border-[1px] shadow-md  ">
       <Link href={`/detials/${productDetails?.id}`}>
-        {" "}
         <div className=" w-full flex flex-col">
           <div className=" relative overflow-auto w-full h-[150px] object-cover">
             <Image src={productDetails?.thumbnail} fill alt="" />

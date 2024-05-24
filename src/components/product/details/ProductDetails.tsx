@@ -29,10 +29,11 @@ const ProductDetails = ({ productId }: Props) => {
     setImageLoader(true);
     const res = await axios.get(ENDPOINT.ALL_PRODUCT);
     const result = await res.data;
-   
+
     setProductList(result?.products);
     setImageLoader(false);
   };
+  console.log(product?.rating);
   useEffect(() => {
     getAllProduct();
   }, []);
@@ -53,12 +54,11 @@ const ProductDetails = ({ productId }: Props) => {
           <Stack spacing={2} alignItems="center" direction="row">
             <Stack spacing={1}>
               <Rating
-                name="half-rating-read"
-                value={product?.rating}
-                precision={0.5}
+                name="half-rating-r"
+                value={parseInt(product?.rating) || 3}
                 readOnly
                 size="small"
-                color="orange"
+
                 // style={{ height: "20px", width: "20px" }}
               />
             </Stack>
