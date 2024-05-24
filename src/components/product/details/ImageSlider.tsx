@@ -24,7 +24,7 @@ const ImageSlider = ({ imageList, thumbImage }: Props) => {
           <div
             key={index}
             onClick={() => setImgShow(item)}
-            className=" border-[1px] cursor-pointer hover:border-gray-400 border-gray-200 shadow-md p-[4px] relative w-full overflow-auto h-[80px]"
+            className=" border-[1px] cursor-pointer hover:border-gray-400 border-gray-200 shadow-md p-[4px] relative w-[120px] overflow-auto h-[80px]"
           >
             <Image src={item || "next.svg"} fill alt="" />
           </div>

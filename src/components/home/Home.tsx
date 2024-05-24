@@ -27,11 +27,12 @@ const Home = (props: Props) => {
     try {
       setIsLoading(true);
       const results = await Promise.all(
-        allCategories?.map(async (item) => {
+        allCategories?.map(async (item: any) => {
           const res = await axios.get(
-            ENDPOINT.PRODUCT_SEARCCH_BY_CATEGORY + item
+            ENDPOINT.PRODUCT_SEARCCH_BY_CATEGORY + item?.slug
           );
-          const result = res.data;
+          const result = res.data.products;
+
           return { item, result };
         })
       );
@@ -43,7 +44,7 @@ const Home = (props: Props) => {
       setIsLoading(false);
     }
   };
- 
+  console.log(categoryWithProduct);
   useEffect(() => {
     getAllCategories();
   }, []);
@@ -67,8 +68,8 @@ const Home = (props: Props) => {
             categoryWithProduct?.map((product: any, index: number) => (
               <div key={index}>
                 <ProductWithCard
-                  title={product?.item}
-                  productList={product?.result?.products?.slice(0, 4)}
+                  title={product?.item?.name}
+                  productList={product?.result?.slice(0, 4)}
                 />
               </div>
             ))
